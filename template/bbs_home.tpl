@@ -28,7 +28,7 @@
 				<img src="images/talks.png" alt="gopher talks img"-->
 			</center>
 		</h1>
-		<form action="post_message" method="POST">
+		<form action="post" method="POST">
 			<label for="name">おなまえ</label></br>
 			<input type="text" id="name" name="name" value="" required placeholder="おなまえ" size="40"/></br>
 			<label for="name">Eメール</label></br>
@@ -45,7 +45,7 @@
 
 		<div class="display_messages">
 			{{range .}}
-			<p>{{.Title}} 投稿者: <a href="{{.Email}}">{{.Name}}</a> 投稿日: {{.Created}}<p>
+			<p>{{.Title}} 投稿者: <a href="mailto:{{.Email}}">{{.Name}}</a> 投稿日: {{.Created}}<p>
 			<p>{{.Message}}</p>
 			<hr>
 			{{end}}
