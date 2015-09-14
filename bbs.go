@@ -6,13 +6,22 @@ import (
 	"html/template"
 	"log"
 	"net/http"
+<<<<<<< HEAD
+	"regexp"
+	"strings"
+=======
+>>>>>>> d90626a32996cfb5f827e9eb98efdc5bc63fa48a
 	"time"
 
 	// Install Command: go get github.com/mattn/go-sqlite3
 	_ "github.com/mattn/go-sqlite3"
 )
 
+<<<<<<< HEAD
+// URL: http://localhost:8080/home
+=======
 // URL: http://localhost:8080
+>>>>>>> d90626a32996cfb5f827e9eb98efdc5bc63fa48a
 const URL = ":8080"
 
 // Global Variables for DB connection
@@ -27,6 +36,42 @@ type Message struct {
 	Created string
 }
 
+<<<<<<< HEAD
+type PostMessage struct {
+	PostName    string
+	PostEmail   string
+	PostTitle   string
+	PostMessage string
+	PostErrors  map[string]string
+}
+
+func (msg *PostMessage) Validate() bool {
+	msg.PostErrors = make(map[string]string)
+
+	if strings.TrimSpace(msg.PostName) == "" {
+		fmt.Println("Empty Name", msg.PostName)
+		msg.PostErrors["PostName"] = "Please write a name"
+	}
+
+	re := regexp.MustCompile(".+@.+\\..+")
+	matched := re.Match([]byte(msg.PostEmail))
+	if matched == false {
+		msg.PostErrors["PostEmail"] = "Please enter a valid email address"
+	}
+
+	if strings.TrimSpace(msg.PostTitle) == "" {
+		msg.PostErrors["PostTitle"] = "Please write a title"
+	}
+
+	if strings.TrimSpace(msg.PostMessage) == "" {
+		msg.PostErrors["PostMessage"] = "Please write a message"
+	}
+
+	return len(msg.PostErrors) == 0
+}
+
+=======
+>>>>>>> d90626a32996cfb5f827e9eb98efdc5bc63fa48a
 func connectDB() (*sql.DB, error) {
 	fmt.Println("### Connect to DB ###")
 	return sql.Open("sqlite3", "db/bbs.db")
@@ -58,7 +103,10 @@ func insertMessage(db *sql.DB, r *http.Request) {
 		values
 		(?,?,?,?,?)`)
 	checkErr(err)
+<<<<<<< HEAD
+=======
 
+>>>>>>> d90626a32996cfb5f827e9eb98efdc5bc63fa48a
 	name := r.Form.Get("name")
 	email := r.Form.Get("email")
 	title := r.Form.Get("title")
@@ -99,8 +147,21 @@ func bbsHome(w http.ResponseWriter, r *http.Request) {
 		}
 
 		// Parse template file
+<<<<<<< HEAD
+		t, err := template.ParseFiles("template/bbs_home.tpl")
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+
+		err = t.Execute(w, messages)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+		}
+=======
 		t, _ := template.ParseFiles("template/bbs_home.tpl")
 		t.Execute(w, messages)
+>>>>>>> d90626a32996cfb5f827e9eb98efdc5bc63fa48a
 	}
 }
 
@@ -113,12 +174,41 @@ func postMessage(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("Email:", template.HTMLEscapeString(r.Form.Get("email")))
 	fmt.Println("Title:", template.HTMLEscapeString(r.Form.Get("title")))
 	fmt.Println("Message:", template.HTMLEscapeString(r.Form.Get("message")))
+<<<<<<< HEAD
+
+	// PostMessage for Input Validation
+	msg := &PostMessage{
+		PostName:    r.Form.Get("name"),
+		PostEmail:   r.Form.Get("email"),
+		PostTitle:   r.Form.Get("title"),
+		PostMessage: r.Form.Get("message"),
+	}
+	// Input Validation
+	if msg.Validate() == false {
+		render(w, "template/post_message.tpl", msg)
+		return
+	}
+
+	insertMessage(db, r)
+
+	// Parse template file
+	t, err := template.ParseFiles("template/thank_you.tpl")
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	err = t.Execute(w, nil)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
+=======
 	// Input Validation
 	//HERE
 
 	insertMessage(db, r)
 	t, _ := template.ParseFiles("template/thank_you.tpl")
 	t.Execute(w, nil)
+>>>>>>> d90626a32996cfb5f827e9eb98efdc5bc63fa48a
 }
 
 func main() {
@@ -130,8 +220,13 @@ func main() {
 	// HTTP requests with the contents of the file system
 	http.Handle("/", http.FileServer(http.Dir(".")))
 
+<<<<<<< HEAD
+	http.HandleFunc("/home", bbsHome)
+	http.HandleFunc("/post", postMessage)
+=======
 	http.HandleFunc("/home/", bbsHome)
 	http.HandleFunc("/post/", postMessage)
+>>>>>>> d90626a32996cfb5f827e9eb98efdc5bc63fa48a
 
 	// Start HTTP server listening port 8080
 	err := http.ListenAndServe(URL, nil)
@@ -140,6 +235,19 @@ func main() {
 	}
 }
 
+<<<<<<< HEAD
+func render(w http.ResponseWriter, filename string, data interface{}) {
+	tmpl, err := template.ParseFiles(filename)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
+	if err := tmpl.Execute(w, data); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
+}
+
+=======
+>>>>>>> d90626a32996cfb5f827e9eb98efdc5bc63fa48a
 func checkErr(err error) {
 	if err != nil {
 		fmt.Println(err)
