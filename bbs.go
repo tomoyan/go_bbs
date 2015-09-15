@@ -9,7 +9,6 @@ import (
 	"regexp"
 	"strings"
 	"time"
-
 	// Install Command: go get github.com/mattn/go-sqlite3
 	_ "github.com/mattn/go-sqlite3"
 )
