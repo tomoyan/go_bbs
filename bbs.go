@@ -9,6 +9,7 @@ import (
 	"regexp"
 	"strings"
 	"time"
+
 	// Install Command: go get github.com/mattn/go-sqlite3
 	_ "github.com/mattn/go-sqlite3"
 )
@@ -20,6 +21,7 @@ const URL = ":8080"
 var db *sql.DB
 var err error
 
+// Message type for messages in DB
 type Message struct {
 	Name    string
 	Email   string
@@ -28,6 +30,7 @@ type Message struct {
 	Created string
 }
 
+// PostMessage typ for Posted Message from Form
 type PostMessage struct {
 	PostName    string
 	PostEmail   string
@@ -36,6 +39,7 @@ type PostMessage struct {
 	PostErrors  map[string]string
 }
 
+// Form Input Validation
 func (msg *PostMessage) Validate() bool {
 	msg.PostErrors = make(map[string]string)
 
