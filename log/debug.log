@@ -1,0 +1,51 @@
+Debug: 2015/09/18 13:03:17 bbs.go:91: ### Connect to DB ###
+[Debug]2015/09/18 13:17:52 C:/Users/tnagashima/Desktop/Go/go_bbs/bbs.go:91: # Connect to DB
+[Debug]2015/09/18 13:18:53 bbs.go:91: # Connect to DB
+[Debug] 2015/09/18 13:20:39 bbs.go:91: # Connect to DB
+[Debug] 2015/09/18 13:40:18 bbs.go:105: # Connect to DB main.funcNname
+[Debug] 2015/09/18 13:41:56 bbs.go:91: # Connect to DB
+[Debug] 2015/09/18 14:47:29 bbs.go:91: # Connect to DB
+[Debug] 2015/09/18 14:51:01 bbs.go:91: # Connect to DB
+[Debug] 2015/09/18 14:51:18 bbs.go:91: # Connect to DB
+[Debug] 2015/09/18 14:51:34 bbs.go:91: # Connect to DB
+[Debug] 2015/09/18 14:52:43 bbs.go:97: # Create Table
+[Debug] 2015/09/18 14:52:43 bbs.go:111: # Select from DB
+[Debug] 2015/09/18 14:53:18 bbs.go:188: # Post Data
+[Debug] 2015/09/18 14:53:18 bbs.go:194: # Name:%s Email:%s Title:%s Message:%s おなまえ　メッセージ testdev08151@d2ptests.d2p タイトル　メッセージ メッセージ　おなまえ　タイトル
+[Debug] 2015/09/18 14:53:18 bbs.go:117: # Insert into DB
+[Debug] 2015/09/18 14:56:18 bbs.go:91: # Connect to DB
+[Debug] 2015/09/18 14:56:30 bbs.go:188: # Post Data
+[Debug] 2015/09/18 14:56:30 bbs.go:194: # Name:おなまえ111　メッセージ111
+ Email:testdev08151@d2ptests.d2p
+ Title:タイトル　メッセージ111
+ Message:メッセージ　おなまえ　タイトル111
+[Debug] 2015/09/18 14:56:30 bbs.go:117: # Insert into DB
+[Debug] 2015/09/18 15:00:34 bbs.go:232: # main
+[Debug] 2015/09/18 15:00:34 bbs.go:92: # connectDB
+[Debug] 2015/09/18 15:00:34 bbs.go:93: # Connect to DB
+[Debug] 2015/09/18 15:01:43.225334 bbs.go:232: # main
+[Debug] 2015/09/18 15:01:43.226334 bbs.go:92: # connectDB
+[Debug] 2015/09/18 15:01:43.226334 bbs.go:93: # Connect to DB
+[Debug] 2015/09/18 15:02:40.792334 bbs.go:232: # main
+[Debug] 2015/09/18 15:02:40.793334 bbs.go:92: # connectDB
+[Debug] 2015/09/18 15:02:40.793334 bbs.go:93: # Connect to DB
+[Debug] 2015/09/18 15:02:58.560334 bbs.go:185: # postMessage
+[Debug] 2015/09/18 15:02:58.560334 bbs.go:195: # Post Data
+[Debug] 2015/09/18 15:02:58.561334 bbs.go:201: # Name:おなまえ33メッセージ111 Email:testdev0815133@d2ptests.d2p Title:タイトル333　メッセージ111 Message:3333メッセージ　おなまえ　タイトル111
+[Debug] 2015/09/18 15:02:58.561334 bbs.go:65: # validate
+[Debug] 2015/09/18 15:02:58.561334 bbs.go:121: # insertMessage
+[Debug] 2015/09/18 15:02:58.561334 bbs.go:122: # Insert into DB
+[Debug] 2015/09/18 15:05:04.778334 bbs.go:232: # Start main
+[Debug] 2015/09/18 15:05:04.779334 bbs.go:92: # Start connectDB
+[Debug] 2015/09/18 15:05:04.779334 bbs.go:93: # Connect to DB
+[Debug] 2015/09/18 15:05:13.987334 bbs.go:140: # Start bbsHome
+[Debug] 2015/09/18 15:05:13.987334 bbs.go:99: # Start createTable
+[Debug] 2015/09/18 15:05:13.988334 bbs.go:100: # Create Table
+[Debug] 2015/09/18 15:05:13.989334 bbs.go:114: # Start getMessage
+[Debug] 2015/09/18 15:05:13.989334 bbs.go:115: # Select from DB
+[Debug] 2015/09/18 15:05:51.309334 bbs.go:185: # Start postMessage
+[Debug] 2015/09/18 15:05:51.310334 bbs.go:195: # Post Data
+[Debug] 2015/09/18 15:05:51.310334 bbs.go:201: # Name:Go掲示板 おなまえ Email:testdev@d2ptests.d2p Title:Go掲示板 タイトル Message:Go掲示板 メッセージ
+[Debug] 2015/09/18 15:05:51.310334 bbs.go:65: # Start validate
+[Debug] 2015/09/18 15:05:51.310334 bbs.go:121: # Start insertMessage
+[Debug] 2015/09/18 15:05:51.310334 bbs.go:122: # Insert into DB

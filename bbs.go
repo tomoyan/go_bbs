@@ -6,6 +6,7 @@ import (
 	"html/template"
 	"log"
 	"net/http"
+	"os"
 	"regexp"
 	"strings"
 	"time"
@@ -20,6 +21,26 @@ const URL = ":8080"
 // Global Variables for DB connection
 var db *sql.DB
 var err error
+
+// Error log variables
+var (
+	//	Trace   *log.Logger
+	//	Info    *log.Logger
+	//	Warning *log.Logger
+	//	Error   *log.Logger
+	Debug *log.Logger
+)
+
+func init() {
+	debugFile, err := os.OpenFile("log/debug.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
+	if err != nil {
+		log.Fatal("Failed to open traceFile :", err.Error())
+	}
+
+	Debug = log.New(debugFile,
+		"[Debug] ",
+		log.LstdFlags|log.Lmicroseconds|log.Lshortfile)
+}
 
 // Message type for messages in DB
 type Message struct {
@@ -40,7 +61,8 @@ type PostMessage struct {
 }
 
 // Form Input Validation
-func (msg *PostMessage) Validate() bool {
+func (msg *PostMessage) validate() bool {
+	Debug.Println("# Start validate")
 	msg.PostErrors = make(map[string]string)
 
 	if strings.TrimSpace(msg.PostName) == "" {
@@ -66,12 +88,16 @@ func (msg *PostMessage) Validate() bool {
 }
 
 func connectDB() (*sql.DB, error) {
-	fmt.Println("### Connect to DB ###")
+	//fmt.Println("### Connect to DB ###")
+	Debug.Println("# Start connectDB")
+	Debug.Println("# Connect to DB")
 	return sql.Open("sqlite3", "db/bbs.db")
 }
 
 func createTable(db *sql.DB) {
-	fmt.Println("### Create Table ###")
+	//fmt.Println("### Create Table ###")
+	Debug.Println("# Start createTable")
+	Debug.Println("# Create Table")
 	db.Exec(
 		`CREATE TABLE IF NOT EXISTS message (
 				message_id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -84,12 +110,16 @@ func createTable(db *sql.DB) {
 }
 
 func getMessage(db *sql.DB) (*sql.Rows, error) {
-	fmt.Println("### Select from DB ###")
+	//fmt.Println("### Select from DB ###")
+	Debug.Println("# Start getMessage")
+	Debug.Println("# Select from DB")
 	return db.Query("SELECT * FROM message order by message_id desc")
 }
 
 func insertMessage(db *sql.DB, r *http.Request) {
-	fmt.Println("### Insert into DB ###")
+	//fmt.Println("### Insert into DB ###")
+	Debug.Println("# Start insertMessage")
+	Debug.Println("# Insert into DB")
 	stmt, err := db.Prepare(
 		`INSERT INTO message
 		(name, email, title, message, created)
@@ -107,6 +137,7 @@ func insertMessage(db *sql.DB, r *http.Request) {
 }
 
 func bbsHome(w http.ResponseWriter, r *http.Request) {
+	Debug.Println("# Start bbsHome")
 	// Check request method
 	// "GET" when the page is displayed
 	if r.Method == "GET" {
@@ -151,14 +182,23 @@ func bbsHome(w http.ResponseWriter, r *http.Request) {
 }
 
 func postMessage(w http.ResponseWriter, r *http.Request) {
+	Debug.Println("# Start postMessage")
 	r.ParseForm()
 
 	// print at server side
-	fmt.Println("### Post Data ###")
-	fmt.Println("Name:", template.HTMLEscapeString(r.Form.Get("name")))
-	fmt.Println("Email:", template.HTMLEscapeString(r.Form.Get("email")))
-	fmt.Println("Title:", template.HTMLEscapeString(r.Form.Get("title")))
-	fmt.Println("Message:", template.HTMLEscapeString(r.Form.Get("message")))
+	//fmt.Println("### Post Data ###")
+	//fmt.Println("Name:", template.HTMLEscapeString(r.Form.Get("name")))
+	//fmt.Println("Email:", template.HTMLEscapeString(r.Form.Get("email")))
+	//fmt.Println("Title:", template.HTMLEscapeString(r.Form.Get("title")))
+	//fmt.Println("Message:", template.HTMLEscapeString(r.Form.Get("message")))
+
+	Debug.Println("# Post Data")
+	Debug.Printf(
+		"# Name:%v Email:%v Title:%v Message:%v",
+		template.HTMLEscapeString(r.Form.Get("name")),
+		template.HTMLEscapeString(r.Form.Get("email")),
+		template.HTMLEscapeString(r.Form.Get("title")),
+		template.HTMLEscapeString(r.Form.Get("message")))
 
 	// PostMessage for Input Validation
 	msg := &PostMessage{
@@ -169,7 +209,7 @@ func postMessage(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Input Validation
-	if msg.Validate() == false {
+	if msg.validate() == false {
 		render(w, "template/post_message.tpl", msg)
 		return
 	}
@@ -189,6 +229,7 @@ func postMessage(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	Debug.Println("# Start main")
 	// Connect to DB
 	db, err = connectDB()
 	checkErr(err)
@@ -208,6 +249,7 @@ func main() {
 }
 
 func render(w http.ResponseWriter, filename string, data interface{}) {
+	Debug.Println("# Start render")
 	tmpl, err := template.ParseFiles(filename)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
