@@ -22,12 +22,12 @@ const URL = ":8080"
 var db *sql.DB
 var err error
 
-// Error log variables
+// Global Variables for error log
 var (
-	//	Trace   *log.Logger
-	//	Info    *log.Logger
-	//	Warning *log.Logger
-	//	Error   *log.Logger
+	//Trace   *log.Logger
+	//Info    *log.Logger
+	//Warning *log.Logger
+	//Error   *log.Logger
 	Debug *log.Logger
 )
 
