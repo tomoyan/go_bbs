@@ -10,10 +10,9 @@ import (
 	_ "github.com/mattn/go-sqlite3"
 )
 
-// URL: http://localhost:8080/home
-const URL = ":8080"
-
 const (
+	// URL: http://localhost:8080/home
+	URL       = ":8080"
 	DATE_TIME = "2006-01-02 15:04:05"
 )
 
@@ -31,9 +30,11 @@ var (
 )
 
 func init() {
-	debugFile, err := os.OpenFile("log/debug.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
+	logFile := "log/debug.log"
+	os.Create(logFile)
+	debugFile, err := os.OpenFile(logFile, os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
 	if err != nil {
-		log.Fatal("Failed to open traceFile :", err.Error())
+		log.Fatal("Failed to open debugFile :", err.Error())
 	}
 
 	Debug = log.New(debugFile,
