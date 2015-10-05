@@ -49,3 +49,155 @@ Debug: 2015/09/18 13:03:17 bbs.go:91: ### Connect to DB ###
 [Debug] 2015/09/18 15:05:51.310334 bbs.go:65: # Start validate
 [Debug] 2015/09/18 15:05:51.310334 bbs.go:121: # Start insertMessage
 [Debug] 2015/09/18 15:05:51.310334 bbs.go:122: # Insert into DB
+[Debug] 2015/09/29 10:06:47.533185 bbs.go:232: # Start main
+[Debug] 2015/09/29 10:06:47.548187 bbs.go:92: # Start connectDB
+[Debug] 2015/09/29 10:06:47.548187 bbs.go:93: # Connect to DB
+[Debug] 2015/09/29 10:07:57.830214 bbs.go:140: # Start bbsHome
+[Debug] 2015/09/29 10:07:57.830214 bbs.go:99: # Start createTable
+[Debug] 2015/09/29 10:07:57.830214 bbs.go:100: # Create Table
+[Debug] 2015/09/29 10:07:57.847216 bbs.go:114: # Start getMessage
+[Debug] 2015/09/29 10:07:57.847216 bbs.go:115: # Select from DB
+[Debug] 2015/09/29 10:48:17.083139 bbs.go:140: # Start bbsHome
+[Debug] 2015/09/29 10:48:17.083139 bbs.go:99: # Start createTable
+[Debug] 2015/09/29 10:48:17.083139 bbs.go:100: # Create Table
+[Debug] 2015/09/29 10:48:17.083139 bbs.go:114: # Start getMessage
+[Debug] 2015/09/29 10:48:17.083139 bbs.go:115: # Select from DB
+[Debug] 2015/10/05 08:28:10.265529 bbs.go:232: # Start main
+[Debug] 2015/10/05 08:28:10.278530 bbs.go:92: # Start connectDB
+[Debug] 2015/10/05 08:28:10.278530 bbs.go:93: # Connect to DB
+[Debug] 2015/10/05 08:28:20.586561 bbs.go:140: # Start bbsHome
+[Debug] 2015/10/05 08:28:20.586561 bbs.go:99: # Start createTable
+[Debug] 2015/10/05 08:28:20.586561 bbs.go:100: # Create Table
+[Debug] 2015/10/05 08:28:20.601562 bbs.go:114: # Start getMessage
+[Debug] 2015/10/05 08:28:20.601562 bbs.go:115: # Select from DB
+[Debug] 2015/10/05 08:29:37.442245 bbs.go:232: # Start main
+[Debug] 2015/10/05 08:29:37.444246 bbs.go:92: # Start connectDB
+[Debug] 2015/10/05 08:29:37.444246 bbs.go:93: # Connect to DB
+[Debug] 2015/10/05 08:33:55.165015 bbs.go:232: # Start main
+[Debug] 2015/10/05 08:33:55.166015 model.go:12: # Start connectDB
+[Debug] 2015/10/05 08:33:55.166015 model.go:13: # Connect to DB
+[Debug] 2015/10/05 08:33:59.467445 bbs.go:140: # Start bbsHome
+[Debug] 2015/10/05 08:33:59.467445 bbs.go:99: # Start createTable
+[Debug] 2015/10/05 08:33:59.467445 bbs.go:100: # Create Table
+[Debug] 2015/10/05 08:33:59.469446 bbs.go:114: # Start getMessage
+[Debug] 2015/10/05 08:33:59.469446 bbs.go:115: # Select from DB
+[Debug] 2015/10/05 08:35:54.849982 bbs.go:232: # Start main
+[Debug] 2015/10/05 08:35:54.850983 model.go:14: # Start connectDB
+[Debug] 2015/10/05 08:35:54.850983 model.go:15: # Connect to DB
+[Debug] 2015/10/05 08:36:16.579155 bbs.go:232: # Start main
+[Debug] 2015/10/05 08:36:16.581155 model.go:14: # Start connectDB
+[Debug] 2015/10/05 08:36:16.581155 model.go:15: # Connect to DB
+[Debug] 2015/10/05 08:36:20.092506 bbs.go:140: # Start bbsHome
+[Debug] 2015/10/05 08:36:20.093507 model.go:21: # Start createTable
+[Debug] 2015/10/05 08:36:20.093507 model.go:22: # Create Table
+[Debug] 2015/10/05 08:36:20.098507 model.go:36: # Start getMessage
+[Debug] 2015/10/05 08:36:20.098507 model.go:37: # Select from DB
+[Debug] 2015/10/05 08:43:50.223889 bbs.go:140: # Start bbsHome
+[Debug] 2015/10/05 08:43:50.223889 model.go:21: # Start createTable
+[Debug] 2015/10/05 08:43:50.223889 model.go:22: # Create Table
+[Debug] 2015/10/05 08:43:50.223889 model.go:36: # Start getMessage
+[Debug] 2015/10/05 08:43:50.223889 model.go:37: # Select from DB
+[Debug] 2015/10/05 08:47:47.190889 bbs.go:232: # Start main
+[Debug] 2015/10/05 08:47:47.191889 models.go:14: # Start connectDB
+[Debug] 2015/10/05 08:47:47.191889 models.go:15: # Connect to DB
+[Debug] 2015/10/05 09:13:24.822999 bbs.go:234: # Start main
+[Debug] 2015/10/05 09:13:24.823999 models.go:18: # Start connectDB
+[Debug] 2015/10/05 09:13:24.823999 models.go:19: # Connect to DB
+[Debug] 2015/10/05 10:02:02.031725 bbs.go:238: # Start main
+[Debug] 2015/10/05 10:02:02.033725 models.go:18: # Start connectDB
+[Debug] 2015/10/05 10:02:02.034725 models.go:19: # Connect to DB
+[Debug] 2015/10/05 10:02:38.446366 routes.go:54: # Start postMessage
+[Debug] 2015/10/05 10:02:38.446366 routes.go:64: # Post Data
+[Debug] 2015/10/05 10:02:38.446366 routes.go:70: # Name:Go Go掲示板 Email:testdev08151@d2ptests.d2p Title:バナータイトル Message:タイトルタイトルタイトルタイトル       
+[Debug] 2015/10/05 10:02:38.446366 models.go:67: # Start validate
+[Debug] 2015/10/05 10:02:38.446366 models.go:47: # Start insertMessage
+[Debug] 2015/10/05 10:02:38.446366 models.go:48: # Insert into DB
+[Debug] 2015/10/05 10:02:41.221644 routes.go:9: # Start bbsHome
+[Debug] 2015/10/05 10:02:41.221644 models.go:25: # Start createTable
+[Debug] 2015/10/05 10:02:41.221644 models.go:26: # Create Table
+[Debug] 2015/10/05 10:02:41.221644 models.go:40: # Start getMessage
+[Debug] 2015/10/05 10:02:41.221644 models.go:41: # Select from DB
+[Debug] 2015/10/05 10:13:59.072422 models.go:18: # Start connectDB
+[Debug] 2015/10/05 10:13:59.073422 models.go:19: # Connect to DB
+[Debug] 2015/10/05 10:13:59.073422 bbs.go:45: # Start main
+[Debug] 2015/10/05 10:14:19.459461 routes.go:54: # Start postMessage
+[Debug] 2015/10/05 10:14:19.459461 routes.go:64: # Post Data
+[Debug] 2015/10/05 10:14:19.459461 routes.go:70: # Name:ks_test Email:testdev0815a1@d2ptests.d2p Title:バナー Message:vvvvv
+[Debug] 2015/10/05 10:14:19.459461 models.go:67: # Start validate
+[Debug] 2015/10/05 10:14:19.459461 models.go:47: # Start insertMessage
+[Debug] 2015/10/05 10:14:19.459461 models.go:48: # Insert into DB
+[Debug] 2015/10/05 10:14:21.131628 routes.go:9: # Start bbsHome
+[Debug] 2015/10/05 10:14:21.131628 models.go:25: # Start createTable
+[Debug] 2015/10/05 10:14:21.131628 models.go:26: # Create Table
+[Debug] 2015/10/05 10:14:21.132628 models.go:40: # Start getMessage
+[Debug] 2015/10/05 10:14:21.132628 models.go:41: # Select from DB
+[Debug] 2015/10/05 10:35:16.990895 models.go:18: # Start connectDB
+[Debug] 2015/10/05 10:35:16.991895 models.go:19: # Connect to DB
+[Debug] 2015/10/05 10:35:16.991895 models.go:25: # Start createTable
+[Debug] 2015/10/05 10:35:16.992895 models.go:26: # Create Table
+[Debug] 2015/10/05 10:35:16.993895 bbs.go:53: # Start main
+[Debug] 2015/10/05 10:35:21.882895 routes.go:9: # Start bbsHome
+[Debug] 2015/10/05 10:35:21.882895 models.go:40: # Start getMessage
+[Debug] 2015/10/05 10:35:21.882895 models.go:41: # Select from DB
+[Debug] 2015/10/05 10:39:17.663895 models.go:18: # Start connectDB
+[Debug] 2015/10/05 10:39:17.664895 models.go:19: # Connect to DB
+[Debug] 2015/10/05 10:39:17.664895 models.go:25: # Start createTable
+[Debug] 2015/10/05 10:39:17.664895 models.go:26: # Create Table
+[Debug] 2015/10/05 10:39:17.675895 bbs.go:54: # Start main
+[Debug] 2015/10/05 10:39:26.766895 routes.go:9: # Start bbsHome
+[Debug] 2015/10/05 10:39:26.766895 models.go:57: # Start getMessage
+[Debug] 2015/10/05 10:39:26.766895 models.go:58: # Select from DB
+[Debug] 2015/10/05 10:40:19.805895 models.go:18: # Start connectDB
+[Debug] 2015/10/05 10:40:19.806895 models.go:19: # Connect to DB
+[Debug] 2015/10/05 10:40:19.806895 models.go:25: # Start createTable
+[Debug] 2015/10/05 10:40:19.806895 models.go:26: # Create Table
+[Debug] 2015/10/05 10:40:19.823895 bbs.go:54: # Start main
+[Debug] 2015/10/05 10:40:24.873895 routes.go:9: # Start bbsHome
+[Debug] 2015/10/05 10:40:24.874895 models.go:57: # Start getMessage
+[Debug] 2015/10/05 10:40:24.874895 models.go:58: # Select from DB
+[Debug] 2015/10/05 10:42:31.259895 models.go:18: # Start connectDB
+[Debug] 2015/10/05 10:42:31.260895 models.go:19: # Connect to DB
+[Debug] 2015/10/05 10:42:31.260895 models.go:25: # Start createTable
+[Debug] 2015/10/05 10:42:31.260895 models.go:26: # Create Table
+[Debug] 2015/10/05 10:42:31.298895 bbs.go:54: # Start main
+[Debug] 2015/10/05 10:42:36.016895 routes.go:9: # Start bbsHome
+[Debug] 2015/10/05 10:42:36.017895 models.go:57: # Start getMessage
+[Debug] 2015/10/05 10:42:36.017895 models.go:58: # Select from DB
+[Debug] 2015/10/05 10:42:53.151836 routes.go:9: # Start bbsHome
+[Debug] 2015/10/05 10:42:53.151836 models.go:57: # Start getMessage
+[Debug] 2015/10/05 10:42:53.151836 models.go:58: # Select from DB
+[Debug] 2015/10/05 10:42:54.191940 routes.go:9: # Start bbsHome
+[Debug] 2015/10/05 10:42:54.191940 models.go:57: # Start getMessage
+[Debug] 2015/10/05 10:42:54.191940 models.go:58: # Select from DB
+[Debug] 2015/10/05 10:42:57.025223 routes.go:9: # Start bbsHome
+[Debug] 2015/10/05 10:42:57.025223 models.go:57: # Start getMessage
+[Debug] 2015/10/05 10:42:57.025223 models.go:58: # Select from DB
+[Debug] 2015/10/05 10:42:57.760297 routes.go:9: # Start bbsHome
+[Debug] 2015/10/05 10:42:57.760297 models.go:57: # Start getMessage
+[Debug] 2015/10/05 10:42:57.760297 models.go:58: # Select from DB
+[Debug] 2015/10/05 10:47:00.029521 models.go:18: # Start connectDB
+[Debug] 2015/10/05 10:47:00.030522 models.go:19: # Connect to DB
+[Debug] 2015/10/05 10:47:00.030522 models.go:25: # Start createTable
+[Debug] 2015/10/05 10:47:00.030522 models.go:26: # Create Table
+[Debug] 2015/10/05 10:47:00.053524 bbs.go:55: # Start main
+[Debug] 2015/10/05 10:47:13.457864 routes.go:9: # Start bbsHome
+[Debug] 2015/10/05 10:47:13.457864 models.go:62: # Start getMessage
+[Debug] 2015/10/05 10:47:13.457864 models.go:63: # Select from DB
+[Debug] 2015/10/05 10:47:20.083527 routes.go:9: # Start bbsHome
+[Debug] 2015/10/05 10:47:20.083527 models.go:62: # Start getMessage
+[Debug] 2015/10/05 10:47:20.083527 models.go:63: # Select from DB
+[Debug] 2015/10/05 10:47:20.603579 routes.go:9: # Start bbsHome
+[Debug] 2015/10/05 10:47:20.603579 models.go:62: # Start getMessage
+[Debug] 2015/10/05 10:47:20.603579 models.go:63: # Select from DB
+[Debug] 2015/10/05 10:47:21.046623 routes.go:9: # Start bbsHome
+[Debug] 2015/10/05 10:47:21.046623 models.go:62: # Start getMessage
+[Debug] 2015/10/05 10:47:21.046623 models.go:63: # Select from DB
+[Debug] 2015/10/05 10:54:08.416356 routes.go:51: # Start postMessage
+[Debug] 2015/10/05 10:54:08.430357 routes.go:61: # Post Data
+[Debug] 2015/10/05 10:54:08.443359 routes.go:67: # Name:test name Email:testdev08151@d2ptests.d2p Title:title test Message:message test@!#
+[Debug] 2015/10/05 10:54:08.443359 models.go:89: # Start validate
+[Debug] 2015/10/05 10:54:08.461360 models.go:69: # Start insertMessage
+[Debug] 2015/10/05 10:54:08.461360 models.go:70: # Insert into DB
+[Debug] 2015/10/05 10:54:10.378552 routes.go:9: # Start bbsHome
+[Debug] 2015/10/05 10:54:10.378552 models.go:62: # Start getMessage
+[Debug] 2015/10/05 10:54:10.378552 models.go:63: # Select from DB
