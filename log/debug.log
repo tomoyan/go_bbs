@@ -1,5 +1,5 @@
-[Debug] 2015/10/05 15:18:07.652598 models.go:18: # Start connectDB
-[Debug] 2015/10/05 15:18:07.653598 models.go:19: # Connect to DB
-[Debug] 2015/10/05 15:18:07.653598 models.go:25: # Start createTable
-[Debug] 2015/10/05 15:18:07.654598 models.go:26: # Create Table
-[Debug] 2015/10/05 15:18:07.709604 bbs.go:56: # Start main
+[Debug] 2015/10/06 12:03:31.606057 models.go:18: # Start connectDB
+[Debug] 2015/10/06 12:03:31.607057 models.go:19: # Connect to DB
+[Debug] 2015/10/06 12:03:31.607057 models.go:25: # Start createTable
+[Debug] 2015/10/06 12:03:31.607057 models.go:26: # Create Table
+[Debug] 2015/10/06 12:03:31.699066 bbs.go:38: # Start main
