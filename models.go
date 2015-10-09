@@ -10,7 +10,7 @@ import (
 	"time"
 
 	// Install Command: go get github.com/mattn/go-sqlite3
-	_ "github.com/mattn/go-sqlite3"
+	_ "github.com/tomoyan/go_bbs/Godeps/_workspace/src/github.com/mattn/go-sqlite3"
 )
 
 func connectDB() (*sql.DB, error) {

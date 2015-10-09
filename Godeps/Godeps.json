@@ -1,0 +1,14 @@
+{
+	"ImportPath": "github.com/tomoyan/go_bbs",
+	"GoVersion": "go1.4.2",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/mattn/go-sqlite3",
+			"Comment": "v1.0.0-9-g897b880",
+			"Rev": "897b8800a7d1a93518b87c00e5d1c5d7476f3701"
+		}
+	]
+}

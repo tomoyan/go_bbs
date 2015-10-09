@@ -1,5 +1,11 @@
-[Debug] 2015/10/06 12:03:31.606057 models.go:18: # Start connectDB
-[Debug] 2015/10/06 12:03:31.607057 models.go:19: # Connect to DB
-[Debug] 2015/10/06 12:03:31.607057 models.go:25: # Start createTable
-[Debug] 2015/10/06 12:03:31.607057 models.go:26: # Create Table
-[Debug] 2015/10/06 12:03:31.699066 bbs.go:38: # Start main
+[Debug] 2015/10/09 13:47:49.690840 models.go:18: # Start connectDB
+[Debug] 2015/10/09 13:47:49.691840 models.go:19: # Connect to DB
+[Debug] 2015/10/09 13:47:49.691840 models.go:25: # Start createTable
+[Debug] 2015/10/09 13:47:49.691840 models.go:26: # Create Table
+[Debug] 2015/10/09 13:47:49.712838 bbs.go:38: # Start main
+[Debug] 2015/10/09 13:47:57.718037 routes.go:9: # Start bbsHome
+[Debug] 2015/10/09 13:47:57.718037 models.go:62: # Start getMessage
+[Debug] 2015/10/09 13:47:57.718037 models.go:63: # Select from DB
+[Debug] 2015/10/09 13:47:59.662843 routes.go:9: # Start bbsHome
+[Debug] 2015/10/09 13:47:59.662843 models.go:62: # Start getMessage
+[Debug] 2015/10/09 13:47:59.662843 models.go:63: # Select from DB
