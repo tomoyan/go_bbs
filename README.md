@@ -8,3 +8,6 @@ go run bbs.go
 
 * URL
 localhost:8080/home
+
+* Heroku
+https://intense-everglades-4952.herokuapp.com/home
