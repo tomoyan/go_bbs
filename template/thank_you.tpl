@@ -18,7 +18,7 @@
 		</head>
 	<body>
 		<div class="thank_you">
-			<a href="http://localhost:8080/home">
+			<a href="/home">
 				Thank <img src="images/doc.png" alt="gopher doc img"> You!!!
 			<a>
 		</div>
